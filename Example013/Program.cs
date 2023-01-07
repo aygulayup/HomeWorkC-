@@ -4,3 +4,17 @@
 // 645 -> 5
 // 78 -> третьей цифры нет
 // 32679 -> 6
+
+Console.WriteLine("Введите целое число: ");
+int num = Convert.ToInt32(Console.ReadLine());
+if (num < 99) Console.WriteLine($"{num} -> третьей цифры нет");
+else
+{
+    while (num > 999)
+{
+    num = num / 10;
+}
+int result = num % 10;
+
+Console.WriteLine(result);
+}
