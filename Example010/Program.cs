@@ -10,6 +10,12 @@
 Console.WriteLine("Введите трехзначное число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
+while (num > 1000 || num < 100)
+{
+    Console.WriteLine("Введите корректное число: ");
+    num = Convert.ToInt32(Console.ReadLine());
+}
+
 int MakeDigit(int number)
 {
 int result = (number/10) % 10;
