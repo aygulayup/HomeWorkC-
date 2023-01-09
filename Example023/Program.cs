@@ -7,3 +7,24 @@
 // 3 | 27
 // 4 | 64
 // 5 | 125
+
+Console.WriteLine("Введите натуральное число: ");
+    int num = Convert.ToInt32(Console.ReadLine());
+
+while (num < 1)
+{
+    Console.WriteLine("Введите корректное число: ");
+    num = Convert.ToInt32(Console.ReadLine());
+}
+
+    SquareNum(num);
+
+void SquareNum(int number)
+{
+    int index = 1;
+    while (index <= number) 
+    {
+        Console.WriteLine($"{index, 3} -> {index * index * index, 3}");
+        index ++;
+    }
+}
