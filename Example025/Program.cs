@@ -15,14 +15,14 @@ int PowerNum(int num1, int num2)
 {
     int result = 1;
 
-    // while (num2 <= 0)
-    // {
-    //     num2 = InsertDigit("Введите корректное число B: ");
-    // }
-
+    while (num2 <= 0)
+    {
+        num2 = InsertDigit("Введите корректное число B: ");
+    }
+//  если num2 отрицательное число, в приложении ответа неразбериха получается. Не понимаю, как исправить.
     for (int i = 1; i <= num2; i++)
     {
-        result = num1 * num1;
+        result = result * num1;
     }
     return result;
 }
