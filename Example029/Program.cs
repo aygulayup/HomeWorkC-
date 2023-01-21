@@ -14,15 +14,15 @@ int[] CreateArray(int size)
     return array;
 }
 
-void PrintArray(int[] arr)
+void PrintArray(int[] array)
 {
-    for (int i = 0; i < arr.Length; i++)
+    Console.Write("[");
+    for (int i = 0; i < array.Length; i++)
     {
-    // Console.Write($"[{arr[i]}]" + ", ");
-    string printArray = string.Join(",", $"[{arr}]");
-    printArray = Convert.ToInt32();
-    Console.Write(printArray);
+        if(i < array.Length - 1) Console.Write(array[i] + ", "); 
+        else Console.Write(array[i]);
     }
+    Console.Write("]");
 }
 
 int[] arr = CreateArray(8);
