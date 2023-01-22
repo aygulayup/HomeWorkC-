@@ -31,7 +31,7 @@ int SumAddPositionNumb(int[] array)
     int result = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        if(array[ (i + 1) % 2 == 0]) result++;
+        if((i + 1) % 2 == 0) result = result + array[i];
     }
     return result;
 }
@@ -41,4 +41,5 @@ int sizeArray = 4, arrayMin = -100, arrayMax = 100;
 int[] arr = CreateArrayRndInt(sizeArray, arrayMin, arrayMax);
 PrintArray(arr);
 int sumAddPosition = SumAddPositionNumb(arr);
+
 Console.WriteLine($" -> {sumAddPosition}");
