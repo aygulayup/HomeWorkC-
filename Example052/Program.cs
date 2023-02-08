@@ -35,8 +35,9 @@ void PrintMatrix(int [,] matrix)// вывод массива в консоль
     }
 }
 
-void AverageOfColumnDigit(int[,] matrix)// ср.арифметическое столбца
+double[] AverageOfColumnDigit(int[,] matrix)// ср.арифметическое столбца
 {
+    double [] array = new double[matrix.GetLength(1)];
     for (int j = 0; j < matrix.GetLength(1); j++)
     {
         double sum = 0;
@@ -44,14 +45,27 @@ void AverageOfColumnDigit(int[,] matrix)// ср.арифметическое с�
         {
             sum = sum + matrix[i, j];
         }
-        double average = sum / matrix.GetLength(0);
-        average = Math.Round(average, 1, MidpointRounding.ToZero);
-        Console.Write($"{average}  ");
+        array[j] = sum / matrix.GetLength(0);
+        array[j] = Math.Round(array[j], 1, MidpointRounding.ToZero);
         sum = 0;
     }
+    return array;
+}
+
+void PrintArray(double [] array)// вывод массива в консоль
+{
+    Console.Write("["); 
+    for (int i = 0; i < array.Length; i++)
+    {
+        if(i < array.Length - 1) Console.Write(array[i] + ", "); 
+        else Console.Write(array[i]); 
+    }
+    Console.Write("]");
 }
 
 int[,] arr2D = CreateMatrixRndInt(3, 4, 0, 10);
 PrintMatrix(arr2D);
 Console.WriteLine();
-AverageOfColumnDigit(arr2D);
+
+double[] averagesArr = AverageOfColumnDigit(arr2D);
+PrintArray(averagesArr);
