@@ -30,19 +30,6 @@ double[] ConvertStringToDoubleArr(string[] stringArray)//конвертиров�
     return doubleArr;
 }
 
-// void FindX(int[] userNumbers)
-// {
-//     int b1 = userNumbers[0];
-//     int k1 = userNumbers[1];
-//     int b2 = userNumbers[2];
-//     int k2 = userNumbers[3];
-//     int x; int y;
-//     y = k1 * x + b1;
-//     x = (y - b1) / k1;
-
-//     y = k2 * x + b2;
-//     x = (y - b2) / k2;
-// }
 
 double CrossX (double[] userNumbers)
 {
