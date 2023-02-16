@@ -45,7 +45,7 @@ int [,] MultipleMatrix(int[,] matr1, int[,] matr2)
     {
         for (int j = 0; j < matrix.GetLength(1); j++)
         {
-            for (int temp = 0; temp < matrix.GetLength(1); temp++)
+            for (int temp = 0; temp < matrix.GetLength(0); temp++)
             {
                 matrix[i, j] += matr1[i, temp] * matr2[temp, j];
             }
@@ -55,11 +55,11 @@ int [,] MultipleMatrix(int[,] matr1, int[,] matr2)
 }
 
 
-int[,] matrix1 = CreateMatrixRndInt(2, 4, 0, 10);
+int[,] matrix1 = CreateMatrixRndInt(3, 2, 0, 10);
 PrintMatrix(matrix1);
 Console.WriteLine();
 
-int[,] matrix2 = CreateMatrixRndInt(3, 2, 0, 10);
+int[,] matrix2 = CreateMatrixRndInt(2, 3, 0, 10);
 PrintMatrix(matrix2);
 Console.WriteLine();
 
